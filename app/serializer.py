@@ -5,7 +5,7 @@ from extensions.extensions import ma
 
 class BookSchema(ma.SQLAlchemyAutoSchema):
 
-    user_id = fields.Integer()
+    # user_id = fields.Integer()
     title = fields.String(required=True, validate=[validate.Length(min=2, max=40)])
     page = fields.Integer(required=True)
     author = fields.String(required=True, validate=[validate.Length(min=2, max=100)])
